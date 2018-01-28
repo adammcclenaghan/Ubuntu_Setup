@@ -16,3 +16,6 @@ current_repo=`pwd`
 
 #setup system packages and system settings
 source system.sh
+
+#setup github
+source github.sh
