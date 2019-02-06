@@ -6,7 +6,7 @@ echo "Initialising System Setup..."
 sudo apt-get -y update
 
 # Commonly used tools
-sudo apt-get install -y tcpdump dnsutils tmux tor maven tree curl python3-pip wireshark emacs
+sudo apt-get install -y tcpdump dnsutils tmux tor maven tree curl python3-pip wireshark emacs weechat-curses weechat-plugins dos2unix
 
 #Setup Wallpaper - Gnome only
 while true; do
