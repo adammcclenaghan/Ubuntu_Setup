@@ -20,4 +20,21 @@ done
 
 read -p 'y/n: ' changeWallpaper
 
+# Create dev area
 
+mkdir ~/development
+
+# Get dotfiles and create emacs symlink
+
+git clone git@github.com:adammcclenaghan/dotfiles.git ~/development
+
+while true; do
+    read -p "Do you want to symlink .emacs to file in dotfiles? This will remove any existing emacs config" yn
+    case $yn in
+	[Yy]* ) rm -f ~/.emacs && ln -s ~/development/dotfiles/emacs/.emacs ~/.emacs ; break;;
+	[Nn]* ) break;;
+	* ) echo "Please enter yes or no";;
+    esac
+done
+
+read -p 'y/n: ' linkEmacs
