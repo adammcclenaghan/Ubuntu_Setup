@@ -37,4 +37,16 @@ while true; do
     esac
 done
 
+# Swap capslock with ctrl
+
+while true; do
+    read -p "Do you want to swap capslock with Ctrl?" yn
+    case $yn in
+	[Yy]* ) echo 'XKBOPTIONS="ctrl:swapcaps"' >> /etc/default/keyboard; sudo rpkg-reconfigure keyboard-configuration; break;;
+	[Nn]* ) break;;
+	* ) echo "Please enter yes or no";;
+    esac
+done
+
+
 read -p 'y/n: ' linkEmacs
