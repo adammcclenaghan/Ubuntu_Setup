@@ -6,7 +6,7 @@ echo "Initialising System Setup..."
 sudo apt-get -y update
 
 # Commonly used tools
-sudo apt-get install -y tcpdump dnsutils tmux tor maven tree curl python3-pip wireshark emacs weechat-curses weechat-plugins dos2unix libxml2-utils
+sudo apt-get install -y tcpdump dnsutils tmux tor maven tree curl python3-pip wireshark emacs weechat-curses weechat-plugins dos2unix libxml2-utils clang
 
 # Install golang via snap
 sudo snap install go --classic
