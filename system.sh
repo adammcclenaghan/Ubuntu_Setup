@@ -51,5 +51,16 @@ while true; do
     esac
 done
 
+# If using the kinesis advantage 2 then swapping the left alt with delete
+# makes life in emacs a lot more pleasant
+while true; do
+    read -p "Do you want to modify keys according to xmodmaprpc from dotfiles?" yn
+    case $yn in
+	[Yy]* ) rm -f ~/.xmodmaprpc && ln -s ~/development/dotfiles/bash/.xmodmaprpc ~/.xmodmaprpc ; break;;
+	[Nn]* ) break;;
+	* ) echo "Please enter yes or no";;
+    esac
+done
+
 
 read -p 'y/n: ' linkEmacs
