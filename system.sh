@@ -56,7 +56,7 @@ done
 while true; do
     read -p "Do you want to modify keys according to xmodmaprpc from dotfiles?" yn
     case $yn in
-	[Yy]* ) rm -f ~/.xmodmaprpc && ln -s ~/development/dotfiles/bash/.xmodmaprpc ~/.xmodmaprpc ; break;;
+	[Yy]* ) rm -f ~/.xmodmaprpc && ln -s ~/development/dotfiles/bash/.xmodmaprpc ~/.xmodmaprpc && chmod +x ~/.xmodmaprpc && chmod +x ~/development/dotfiles/bash/.xmodmaprpc; break;;
 	[Nn]* ) break;;
 	* ) echo "Please enter yes or no";;
     esac
